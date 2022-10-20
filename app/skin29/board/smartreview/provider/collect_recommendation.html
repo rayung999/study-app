@@ -1,0 +1,25 @@
+<!--
+    참고 : 리뷰글을 고정으로 특정 페이지에 노출하고 싶을 때 활용
+-->
+<div class="ec-board-list-multiple-list-wrapper">
+    <div class="reviewArea" async_module="smartreview_dispFixedList">
+        <!--
+            $more_view_type = ignore
+        -->
+        <!-- 비동기로 처리된 이후 노출되는 섹션 -->
+        <div async_section="after" style="display:none;">
+            <div class="reviewList ec-board-list-items-data {$*display_list_block_visible_class}">
+                <ul async_module="smartreview_dispFixedListItems">
+                    <!--
+                        $list_review_no = 1,2,3
+                    -->
+                    <!--@import(/board/smartreview/provider/gallery/item.html)-->
+                </ul>
+            </div>
+            <div class="ec-board-list-items-empty"></div>
+        </div>
+        <!-- 비동기 실패시 노출되는 섹션 -->
+        <div async_section="error" style="display:none;">
+        </div>
+    </div>
+</div>

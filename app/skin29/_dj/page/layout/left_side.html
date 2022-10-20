@@ -1,0 +1,61 @@
+<div id="left_side">
+    
+
+    <!-- 로고 -->
+    <div class="logo">
+        <a href="/index.html"><img src="/_dj/img/logo.png" alt="로고"></a>
+    </div>
+    
+  
+    
+    <!-- 검색창 -->
+    <div module="Layout_SearchHeader">
+          <!--@css(/css/module/layout/searchHeader.css)-->
+          <!--
+             $product_page=/product/detail.html
+             $category_page=/product/list.html
+          -->
+           <fieldset>
+              <legend>검색</legend>
+           {$form.keyword}<input type="image" src="/_dj/img/btn_search.png" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+     </div>
+    
+    
+    
+    <!-- 회원 메뉴 -->
+    <div class="my_shop">
+        <ul>
+            <!-- 비 로그인 -->
+            <li module="Layout_statelogoff">
+                <a href="/member/login.html" class="log">LOGIN</a><span>/</span>
+                <a href="/member/join.html">JOIN</a>
+            </li>
+            <!-- 로그인 후 -->
+            <li module="Layout_stateLogon">
+                <a href="/member/modify.html">MY INFO </a><span>/</span>
+                <a href="{$action_logout}" class="log">LOGOUT</a>
+            </li>
+            <li class="list">
+                <a href="/order/basket.html"  module="Layout_shoppingInfo">CART <span module="Layout_orderbasketcount" class="cart_no">{$basket_count}</span></a>
+                <a href="/myshop/order/list.html">ORDER</a>
+                <a href="/myshop/index.html">MY PAGE</a>
+            </li>
+         </ul>
+    </div>
+    
+    
+    
+    <!-- 카테고리 -->
+    <div class="category" module="Layout_category">
+             <!--@js(/js/module/layout/category.js)-->
+             <div class="position">
+                 <ul>
+                     <li><a href="/{$design_page_url}{$param}">{$name}</a></li>
+                     <li><a href="/{$design_page_url}{$param}">{$name}</a></li>
+                     <li><a href="/{$design_page_url}{$param}">{$name}</a></li>
+                 </ul>
+             </div>
+     </div>
+
+    
+</div>

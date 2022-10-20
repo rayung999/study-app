@@ -1,0 +1,51 @@
+#imagetap {width: 40%; display: inline-block; margin: 0px 20px 0px 0px; }
+/* The grid: Four equal columns that floats next to each other */
+#imagetap .column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+#imagetap .column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+#imagetap .column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+#imagetap .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+#imagetap .container {
+  position: relative;
+  display: block;
+    border:1px solid #ececec;
+    margin: 10px;
+}
+
+/* Expanding image text */
+#imagetap #imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+#imagetap .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}

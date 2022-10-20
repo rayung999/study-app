@@ -1,0 +1,91 @@
+<!--
+1. 이 상품 어때요?: product_listmain_16
+2. 기획전: product_listmain_17
+3. MD의 추천:
+   생활: product_listmain_1
+   자동차: product_listmain_3
+   건강: product_listmain_4
+   기획전: product_listmain_2
+4. 신상품: product_listmain_18
+-->
+
+<div id="main_section_2" class="main_section md_choice" >    
+    <div class="title" >
+        <h2 class="mdschoice">MD의 추천</h2>
+    </div>
+
+    <div id="md-buttons">
+        <button id="md_lifebtn" class="md-buttons-button md-buttons-button-active" onclick="openList('md_life')" >생활</button>
+        <button id="md_carbtn" class="md-buttons-button" onclick="openList('md_car')" >자동차</button>
+        <button id="md_healthbtn" class="md-buttons-button" onclick="openList('md_health')">건강</button>
+        <button id="md_eventbtn" class="md-buttons-button" onclick="openList('md_event')">기획전</button>
+    </div>
+    
+	<div id="md_life" class="dj-product dj-main-product SectionmdRecList"  module="product_listmain_1" style="display:">
+    <ul class="prdList grid4">
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+     </ul>
+      <p class="more_btn"><a href="/product/list.html?cate_no=114">생활 전체보기<img src="/_dj/img/baseline_chevron_right_black_18dp_small.png"/></a></p>
+    </div> 
+    
+    <div id="md_car" class="dj-product dj-main-product SectionmdRecList"  module="product_listmain_3" style="display:none">
+    <ul class="prdList grid4">
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+     </ul>
+      <p class="more_btn"><a href="/product/list.html?cate_no=139">자동차 전체보기<img src="/_dj/img/baseline_chevron_right_black_18dp_small.png"/></a></p>
+    </div> 
+    
+    <div id="md_health" class="dj-product dj-main-product SectionmdRecList"  module="product_listmain_4" style="display:none">
+    <ul class="prdList grid4">
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+     </ul>
+      <p class="more_btn"><a href="/product/list.html?cate_no=122">건강 전체보기<img src="/_dj/img/baseline_chevron_right_black_18dp_small.png"/></a></p>
+    </div>
+    
+    <div id="md_event" class="dj-product dj-main-product SectionmdRecList"  module="product_listmain_2" style="display:none">
+    <ul class="prdList grid4">
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+     </ul>
+      <p class="more_btn"><a href="/product/list.html?cate_no=163">기획전 전체보기<img src="/_dj/img/baseline_chevron_right_black_18dp_small.png"/></a></p>
+    </div>
+    
+</div>
+
+
+<script>
+function openList(listName) {
+  var i;
+  var x = document.getElementsByClassName("SectionmdRecList");
+  for (i = 0; i < x.length; i++) {
+     if(x[i].style.display == null){
+         return;
+      }
+      else{
+          x[i].style.display = "none";
+      }
+  }
+  document.getElementById(listName).style.display = "";
+}
+</script>
+
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("md-buttons");
+var btns = header.getElementsByClassName("md-buttons-button");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("md-buttons-button-active");
+  current[0].className = current[0].className.replace(" md-buttons-button-active", "");
+  this.className += " md-buttons-button-active";
+  });
+}
+</script>

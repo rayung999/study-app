@@ -1,0 +1,14 @@
+<!-- 
+    참고 : 이 페이지는 나의 주문내역 입니다 
+    사용되는 페이지들 : 나의 주문내역
+-->
+<!-- 비동기로 전달할 템플릿 영역(반드시 포함이 되어있어야함) -->
+<div id="ec-board-myshoporderlist-wrapper" style="display:none;">
+</div>
+<div async_module="smartreview_dispMyshopOrderList" async_type="template">
+    <!-- 비동기로 처리된 이후 노출되는 섹션 -->
+    <div async_section="after" style="display:none;" data-key="{$*no}">
+        <a href="#none" onclick="{$*display_write_link_onclick}" class="{$*review_write_display}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_review_write.gif" alt="리뷰작성" /></a>
+        <a href="#none" onclick="{$*display_read_link_onclick}" class="{$*review_view_display}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_review_check.gif" alt="리뷰확인" /></a>
+    </div>
+</div>

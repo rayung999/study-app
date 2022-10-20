@@ -1,0 +1,10 @@
+.today_view_empty {  color:#999; font-size:11px; line-height:15px;  z-index:1 !important;  }
+
+.xans-layout-productrecent { border:1px solid #ddd; text-align:center; background:#fff; }
+.xans-layout-productrecent h2 a { display:block; height:30px; line-height:30px; font-size:12px; font-weight:normal; color:#2e2e2e; }
+.xans-layout-productrecent ul { width:76px; margin:0 auto 10px; }
+.xans-layout-productrecent li a { color:#2e2e2e; font-size:11px; }
+.xans-layout-productrecent li img { max-width:60px; }
+.xans-layout-productrecent li span { display:block; padding:2px 0; line-height:16px; }
+.xans-layout-productrecent .player { overflow:hidden; *zoom:1; }
+.xans-layout-productrecent .player img { float:center; padding:0 10px;}

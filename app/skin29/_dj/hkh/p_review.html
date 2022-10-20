@@ -1,0 +1,90 @@
+<div id="main_section_6" class="main_section"> 
+    <div class="inner" id="main_review">    
+        
+        <ul>
+            <li>
+                <div class="title" >
+                    <!--------------------------------------------------------------------------------------------------
+                        ※ 타이틀 수정 - 텍스트만 변경바랍니다.
+                    --------------------------------------------------------------------------------------------------->
+                    <h2>상품후기<p class="bar"></p></h2>
+                </div>
+            <li>
+        </ul>
+          
+
+<div module="Board_ListPackage_4" id="p_review">
+    <!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_dj/css/dj-review.css)-->
+
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_4">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="dj-board-p">
+        <ul module="board_list_4" class="">
+            <!--
+                $count = 10
+                $product_name_cut = 30
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+           <li onclick="window.location.href='/board/p_review/read.html{$param_read}';">
+                <div class="b-list">       
+                    <p class="no">{$checkbox}</p>
+                    <div class="pic_zone">        
+                        <ul>                   
+                            <span class="empty {$product_img|display}"><img src="/_dj/img/p_review_bg_img.jpg" alt="empty_img" /></span>
+                            <span class="thumb">{$product_img}</span>
+                            <span class="thumb_img {$icon_file|display}"><img src="{$img_src|replace:/gallery,/}" /></span>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="subject">{$subject}</p>
+                        <p class="content">{$content|striptag}</p>
+                        <p class="writer">{$member_icon}{$writer}</p>
+                        <p class="date {$date_display|display}"><span class="txtNum">{$write_date}</span></p>
+                        <p class="hit {$hit_display|display}"><span class="txtNum">{$hit_count}</span></p>
+                        <p class="vote {$vote_display|display}"><span class="txtNum">{$vote}</span></p>
+                        <p class="point {$point_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}점"></p>
+                    </div>
+                </div>
+           </li>
+           <li onclick="window.location.href='/board/p_review/read.html{$param_read}';">
+                <div class="b-list">       
+                    <p class="no">{$checkbox}</p>
+                    <div class="pic_zone">        
+                        <ul>          
+                            <span class="empty {$product_img|display}"><img src="/_dj/img/p_review_bg_img.jpg" alt="empty_img" /></span>
+                            <span class="thumb">{$product_img}</span>
+                            <span class="thumb_img {$icon_file|display}"><img src="{$img_src|replace:/gallery,/}" /></span>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="subject">{$subject}</p>
+                        <p class="content">{$content|striptag}</p>
+                        <p class="writer">{$member_icon}{$writer}</p>
+                        <p class="date {$date_display|display}"><span class="txtNum">{$write_date}</span></p>
+                        <p class="hit {$hit_display|display}"><span class="txtNum">{$hit_count}</span></p>
+                        <p class="vote {$vote_display|display}"><span class="txtNum">{$vote}</span></p>
+                        <p class="point {$point_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}점"></p>
+                    </div>
+                </div>
+           </li>
+        </ul>
+    </div><!--//dj-board-p-->
+	<p class="more_btn"><a href="/board/p_review/list.html?board_no=4">상품후기 전체보기<img src="/_dj/img/baseline_chevron_right_black_18dp_small.png"/></a></p>
+	</div><!--//Board_ListPackage_4-->
+
+           
+	</div><!--//main_review-->
+   
+</div>

@@ -1,0 +1,65 @@
+<div class="xans-layout-category right_cate">
+        <div class="position">        
+            <ul> 
+                <!------------------------------------------------------------------------------------------------------------------     
+
+                ※ 커뮤니티
+ 
+                ------------------------------------------------------------------------------------------------------------------->
+                <!--@import(/_dj/page/layout/community.html)-->
+                 
+                <!--★ 멀티 쇼핑몰 시작 ★-->
+                <li>
+                    <div module="Layout_multishopList" class="list">
+                        <!--@css(/css/module/layout/multishopList.css)-->
+                        <button type="button" class="toggle"><span><img src="//img.cafe24.com/img/common/global/{$current_language_code}_32x24.png" alt="" /> </span></button>
+                        <ul module="Layout_multishopListitem">
+                            <li class="{$selected_class}"><a href="//{$shop_domain}/"><img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" /></a></li>
+                            <li class="{$selected_class}"><a href="//{$shop_domain}/"><img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" /></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!--// 멀티 쇼핑몰 끝 -->
+            </ul>
+       </div> 
+     </div>
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------     
+
+    ※ 검색창 
+ 
+------------------------------------------------------------------------------------------------------------------->
+<!--<div class="right_area">
+    <div class="right_icon">       
+        <li class="search all_list">               
+            <div id="find_btn" class="find_btn">
+                <a href="#none"><img src="/_dj/img/top_r_menu_icon_03_b.png" alt="검색버튼"  class="btn_b"  /></a>
+            </div>
+            
+            <div id="find_view">
+                <div module="Layout_SearchHeader">-->
+                    <!--
+                    $product_page=/product/detail.html
+                    $category_page=/product/list.html
+                    -->
+                    <!--<fieldset><span>검색</span> {$form.keyword}<input type="image" src="/_dj/img/search_btn_img.png" alt="검색" onclick="{$action_search_submit}" /> <div id="find_btn2" class="find_btn"><a href="#none">X</a></div></fieldset>
+                </div>
+                <div class="bestKeyword" module="search_hotkeyword"> 
+                    <span>추천 검색어</span>
+                    <span>
+                        <a href="{$hot_keyword_url}">만개의 미세모 뽀송칫솔</a>
+                        <a href="{$hot_keyword_url}">이지풋 실리콘 풋브러쉬</a>
+                        <a href="{$hot_keyword_url}">혀 클리너</a>
+                        <a href="{$hot_keyword_url}">욕실 다용도수납홀더</a>
+                        <a href="{$hot_keyword_url}">차량용 멀티 컵홀더</a>
+                        
+                     </span>
+                </div> 
+            </div>
+        </li>
+    </div>
+</div>-->
+

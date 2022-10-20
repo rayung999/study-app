@@ -1,0 +1,29 @@
+    <!-- 추가구성상품 -->
+    <div  module="product_detail" class="set_prd_all">   
+            <div class="dj_slider infoArea set_prd"  module="product_addproduct">   
+                 <div class="title"><h2>함께 구매하면 더 좋은 상품</h2></div>
+                     <div class="slider_set_prd dj-product productSet additional" >          
+                           <div><!--@import(/_dj/page/set_prd_item_list.html)--></div>  
+                           <div><!--@import(/_dj/page/set_prd_item_list.html)--></div>
+                     </div> 
+                     <!--@import(/_dj/js/slick_js.html)-->
+                     <!-- 
+                     autoplaySpeed: 5000 에서 속도를 조절하시면 됩니다. 1000 = 1초 
+                     -->
+                     <script type="text/javascript">
+                     $('.slider_set_prd').slick({   
+                     slidesToShow: 5,
+                     slidesToScroll: 5,
+                     autoplay: true,
+                     autoplaySpeed: 10000,
+                     dots: true,
+                     arrow: true,
+                     infinite: true,
+                     speed: 500,     
+                     cssEase: 'linear',
+                     accessibility: false,
+                     pauseOnHover: false,          
+                     });
+                     </script> 
+             </div>
+    </div><!--// 추가구성상품 -->

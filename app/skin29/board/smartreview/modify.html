@@ -1,0 +1,255 @@
+<!-- 비동기로 전달할 템플릿 영역(반드시 포함이 되어있어야함) -->
+<div class="reviewArea">
+    <div id="ec-board-write-wrapper" style="display:none;">
+    </div>
+
+    <!----start DISP_UPDATEPRODUCT INFO TEMPLATE ---->
+    <div async_module="smartreview_dispUpdateProductInfoReview" async_type="template">
+        <div async_section="before">
+        </div>
+        <div async_section="after" style="display:none;padding-left: 130px;">
+            <p class="reviewThumb">
+                <a href="/product/detail.html?product_no={$*product_no}" class="ec-board-product-link">{$*img_product_tiny_image}</a>
+            </p>
+            <div class="summary">
+                <p class="icon">{$*display_product_new_icon} {$*display_product_recommand_icon} {$*display_product_soldout_icon} {$*display_product_stock_icon}</p>
+                <strong class="heading">{$*product_name|cut:50,...}</strong>
+                <p class="price">{$*product_price} {$*product_tax_type_text}</p>
+                <div class="info" style="margin-bottom: 10px;">
+                    <dl>
+                        <dt>리뷰</dt>
+                        <dd>{$*product_review_count}</dd>
+                    </dl>
+                    <dl class="{$*product_rating_display}">
+                        <dt>평점</dt>
+                        <dd>{$*product_rating}</dd>
+                    </dl>
+                    <a href="#none" class="btnOther {$*use_other_select_display}" onclick="window.open('/board/smartreview/other_select.html','','width=600,height=670');return false;"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/review/btn_other_select.gif" alt="다른 상품 선택" /></a>
+                </div>
+                <span class="gRight {$*bIsShowOrderLabel}" style="display:inline-block;">
+                    <strong>주문 번호</strong>
+                </span>
+                <select class="order-id {$*bIsShowOrders}" style="display:inline-block;">
+                    <option value="{$*order_display}">{$*order_id}</option>
+                    <option value="{$*order_display}">{$*order_id}</option>
+                </select>
+                <label class="btnOther {$*bIsOnlyOrder}" style="padding: 10px;display:inline-block;">{$*product_order_id}</label>
+            </div>
+        </div>
+        <div async_section="error" style="display:none;">
+        </div>
+    </div>
+    <!----end DISP_UPDATEPRODUCT INFO TEMPLATE ---->
+
+    <!----start DISP_CHANGEPRODUCT TEMPLATE ---->
+    <div async_module="smartreview_dispChangeProduct" async_type="template">
+        <div async_section="before">
+        </div>
+        <div async_section="after" style="display:none;">
+            <div class="reviewLayer typeLead">
+                <div class="possible ec-board-able">
+                    <div style="padding: 5px 20px;">
+                        <h3>리뷰작성 가능 상품</h3><span class="count">(총 <strong>{$*review_writable_count}</strong>건)</span>
+                        <fieldset class="ec-base-box">
+                        <span id="order-range" class="period">
+                            <a href="#none" class="btnNormal" days="00"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1.gif" offimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1.gif" onimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1_on.gif" alt="today"></a>
+                            <a href="#none" class="btnNormal" days="07"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2.gif" offimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2.gif" onimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2_on.gif" alt="1 week"></a>
+                            <a href="#none" class="btnNormal" days="30"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3.gif" offimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3.gif" onimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3_on.gif" alt="1 month"></a>
+                            <a href="#none" class="btnNormal" days="90"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4.gif" offimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4.gif" onimage="//img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4_on.gif" alt="3 months"></a>
+                        </span>
+
+                            <input id="smartreview_order_start_date" name="smartreview_order_start_date" class="fText " readonly="readonly" size="10" value="{$*change_start_date}" type="text"><button type="button" class="ui-datepicker-trigger history_start_date_trigger ui-datepicker-trigger-pc"></button>
+                            <font style="vertical-align: inherit;"><font style="vertical-align: middle;"> ~ </font></font>
+                            <input id="smartreview_order_end_date" name="smartreview_order_end_date" class="fText" readonly="readonly" size="10" value="{$*change_end_date}" type="text">
+                            <button type="button" class="ui-datepicker-trigger history_end_date_trigger ui-datepicker-trigger-pc"></button>
+                            <input alt="Lookup" id="order_search_btn" type="image" src="//img.echosting.cafe24.com/skin/admin_ko_KR/myshop/btn_search.gif"></fieldset>
+                    </div>
+                    <div class="possible ec-board-able-list">
+                        <ul>
+                            <li class="ec-board-able-btn" data-product-no="{$*product_no}" data-order-id="{$*order_id}" data-item-code="{$*item_code}" onclick="{$*select_onclick_change_product}"><a href="#none">{$*list_image_url}</a></li>
+                            <li class="ec-board-able-btn" data-product-no="{$*product_no}" data-order-id="{$*order_id}" data-item-code="{$*item_code}" onclick="{$*select_onclick_change_product}"><a href="#none">{$*list_image_url}</a></li>
+                        </ul>
+                    </div>
+                    <p class="paging {$*review_page_display}">
+                        <button id="ec-board-review-popup-pagination-prev-button" type="button" class="btnPrev">이전</button>
+                        <button id="ec-board-review-popup-pagination-next-button" type="button" class="btnNext">다음</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div async_section="error" style="display:none;">
+        </div>
+    </div>
+    <!----end DISP_UPDATEPRODUCT INFO TEMPLATE ---->
+
+    <div async_module="smartreview_dispModify" async_type="template">
+        <!-- 비동기로 처리전 노출되는 섹션 -->
+        <div async_section="before" style="display:none;">
+            <div class="loadingBar">
+                <p>처리중입니다. 잠시만 기다려 주세요.</p>
+                <img src="//img.echosting.cafe24.com/suio/ico_loading.gif" alt="" />
+            </div>
+        </div>
+        <!-- 비동기로 처리된 이후 노출되는 섹션 -->
+         <div async_section="after" style="display:none;">
+             <div id="ec-board-review-write">
+                <div class="dimmed"></div>
+                <div class="reviewLayer typeWrite ec-board-review-wrap">
+                    <h2>리뷰수정</h2>
+                    <!----start PRODUCT LIST BOARD ---->
+                    <div id="ec-board-get-purchased-products">
+                        <div class="loading" style="display:none">
+                            <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요">
+                        </div>
+                    </div>
+                    <!----start PRODUCT LIST BOARD ---->
+                    <div class="content">
+                        <div class="prdInfo">
+                            <p class="reviewThumb">
+                                <a href="/product/detail.html?product_no={$*product_no}" class="ec-board-product-link">{$*img_product_tiny_image}</a>
+                            </p>
+                            <div class="summary">
+                                <p class="icon">{$*display_product_new_icon} {$*display_product_recommand_icon} {$*display_product_soldout_icon} {$*display_product_stock_icon}</p>
+                                <!----start MODIFY PRODUCT CONTAINER ---->
+                                <strong class="heading">{$*product_name|cut:50,...}</strong>
+                                <p class="price">{$*product_price} {$*product_tax_type_text}</p>
+                                <div class="info" style="margin-bottom: 10px;">
+                                <!----start MODIFY PRODUCT CONTAINER ---->
+                                    <dl>
+                                        <dt>리뷰</dt>
+                                        <dd>{$*product_review_count}</dd>
+                                    </dl>
+                                    <dl class="{$*product_rating_display}">
+                                        <dt>평점</dt>
+                                        <dd>{$*product_rating}</dd>
+                                    </dl>
+                                    <a href="#none" class="btnOther {$*use_other_select_display}" onclick="window.open('/board/smartreview/other_select.html','','width=600,height=670');return false;"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/review/btn_other_select.gif" alt="다른 상품 선택" /></a>
+                                </div>
+
+                                <!----start CHANGE PRODUCT BTN ---->
+                                <span class="gRight {$*available_change_product}">
+                                    <a href="#none" id="ec-board-review-change-product"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_board_write1.gif" alt="상품 변경"></a>
+                                </span>
+                                <!----start CHANGE PRODUCT BTN ---->
+                            </div>
+                        </div>
+                        <div class="ec-board-grade ec-board-grade-write ec-board-star large"></div>
+                        <div async_module="smartreview_dispModifyFile" async_type="template">
+                            <div async_section="before" style="display:none;">
+                                <div class="loading">
+                                    <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요">
+                                </div>
+                            </div>
+                            <div async_section="after">
+                                <div  class="attachList empty">
+                                    <ul>
+                                        <li class="{$*imageAssign}">
+                                            {$*img_url}
+                                            <button type="button" class="btnDelete">삭제</button>
+                                        </li>
+                                        <li class="{$*imageAssign}">
+                                            {$*img_url}
+                                            <button type="button" class="btnDelete">삭제</button>
+                                        </li>
+                                    </ul>
+                                    <!-- 글수정시 사진추가 -->
+                                    <label for="ec-board-review-upload1" class="btnAdd" style="display:none;">사진추가</label>
+                                    <!--사진 없는 경우 -->
+                                    <label for="ec-board-review-upload0" class="btnAddEmpty" style="display:none;">사진추가</label>
+                                </div>
+                            </div>
+                            <div async_section="error" style="display:none;"></div>
+                        </div>
+                        <div async_module="smartreview_dispModifyAddItem" async_type="template" class="{$*display_adding_item}">
+                            <div async_section="before" style="display:none;">
+                                <div class="loading">
+                                    <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요" />
+                                </div>
+                            </div>
+                            <div async_section="after" style="display:none;" class="addItem">
+                                <table border="1" summary="">
+                                    <caption>추가항목</caption>
+                                    <colgroup>
+                                        <col style="width:110px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="{$*adding_item_info_display}">
+                                            <th scope="row">{$*item_name}</th>
+                                            <td>{$*item_value}</td>
+                                        </tr>
+                                        <tr class="{$*adding_item_info_display}">
+                                            <th scope="row">{$*item_name}</th>
+                                            <td>{$*item_value}</td>
+                                        </tr>
+                                        <tr class="{$*product_option_info_display}">
+                                            <th scope="row">선택한 옵션</th>
+                                            <td>
+                                                <div class="prdOption">
+                                                    <p class="normal {$*normal_product_info_display}"><span class="option">{$*display_product_option_info} <strong class="etc {$*normal_product_order_quantity_display}">외 {$*display_normal_product_order_quantity}개 구매</strong></span></p>
+                                                    <ul class="set {$*set_product_info_display}">
+                                                        {$*display_product_set_info}
+                                                    </ul>
+                                                    <p class="etc {$*set_product_info_etc_display}"><span class="etcCount {$*set_product_others_count_display}">외 {$*display_set_product_others_count}개 구성상품 포함 <strong class="subInfo {$*set_product_order_quantity_display}">외 {$*display_set_product_order_quantity}개 구매</strong></span></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div async_section="error" style="display:none;">
+                            </div>
+                        </div>
+                        <div class="contentWarp">
+                            {$*csrf}<!-- 보안필수 -->
+                            <div class="contentBox"></div>
+                            <textarea rows="4" cols="77" class="contentWrite" placeholder="내용을 입력하세요.">{$*contents}</textarea>
+                        </div>
+                        <p class="wordCount"><strong class="blind">글자수</strong> <span class="ec-board-current-text-count"></span><span class="ec-board-current-text-tail"></span></p>
+                        <div async_module="smartreview_dispModifyHashTag" async_type="template" class="{$*display_hash_tag}">
+                            <div async_section="before" style="display:none;">
+                                <div class="loading">
+                                    <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요" />
+                                 </div>
+                            </div>
+                            <div async_section="after" style="display:none;" class="recommend">
+                                <h3>추천 태그</h3>
+                                <div class="tags">
+                                    <span class="btnHash">{$*hashtag}</span>
+                                    <span class="btnHash">{$*hashtag}</span>
+                                </div>
+                            </div>
+                            <div async_section="error" style="display:none;">
+                            </div>
+                        </div>
+
+                        <div class="postSns {$*use_sns_display}">
+                            <h3>SNS로 퍼가기</h3>
+                            <span class="checkDesign"><input type="checkbox" id="ec-board-post-sns" value="{$*post_sns_value}" /><label for="ec-board-post-sns">허용</label></span>
+                        </div>
+
+                        <div class="noMember {$*use_is_login_display}">
+                            <h3>개인정보 이용동의</h3>
+                            <div class="termArea">
+                                <span class="checkDesign"><input type="checkbox" id="ec-board-term-agree"/><label class="ec-board-term-agree">개인정보 수집 및 이용동의</label></span>
+                                <button type="button" class="ec-board-button-agree btnFold">내용보기</button>
+                                <textarea class="ec-board-content-agree term"  cols="75" rows="4" readonly="readonly"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="btnArea">
+                            <a href="#none" id="ec-board-review-modify-button"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/review/btn_review_modify.gif" alt="리뷰수정" /></a>
+                        </div>
+                    </div>
+                    <div class="close">
+                        <button type="button" class="btnClose" id="ec-board-review-write-close-button">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 비동기 실패시 노출되는 섹션 -->
+        <div async_section="error" style="display:none;">
+            error
+        </div>
+    </div>
+</div>

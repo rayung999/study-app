@@ -1,0 +1,75 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/product/search_form.css)-->
+
+<div id="wrap_contents">
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>상품검색</strong></li>
+    </ol>
+</div>
+
+<div class="titleAreaSearch">
+    <h2>상품검색</h2>
+    <p>워시몰에서 원하는 상품을 찾아보세요.</p>
+</div>
+
+
+<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+<div module="search_form">
+    
+    <div class="search_page">
+    <div class="right_icon">       
+        <li class="search all_list">                      
+            <div id="find_view">
+                <div>
+                    <fieldset><span>검색조건</span> {$form.keyword}<input type="image" src="/_dj/img/top_r_menu_icon_03_b.png" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+                </div>
+            </div>
+        </li>
+    </div>
+</div>
+
+    <div class="searchResult" >
+        <p class="record">총 <strong>{$total_count}</strong> 개 의 상품이 검색되었습니다.</p>
+        <ul class="listType" module="search_Orderby">
+            <li class="btn_order" rel='{$rel}' style='{$style}' >{$sort_name}</li>
+            <li class="btn_order" rel='{$rel}' style='{$style}' >{$sort_name}</li>
+        </ul>
+    </div>
+
+    <p class="noData {$search_fail_display|display}">검색결과가 없습니다.</p>
+</div><!-- //참고 -->
+
+<div module="Search_Result"  class="dj-product">
+    <!--
+        $count = 80
+    -->
+   <ul class="prdList grid4">
+      <!--@import(/_dj/page/product/item_list.html)-->
+      <!--@import(/_dj/page/product/item_list.html)-->
+   </ul>
+</div>
+
+
+
+<div module="search_paging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>
+</div>

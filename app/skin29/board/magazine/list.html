@@ -1,0 +1,57 @@
+<!--@layout(/layout/basic/layout.html)-->
+<style>
+#wrap { margin:0 }
+#footer { margin:-80px 0 0 !important; padding:0 !important }
+#left_line .left_con {  }
+.xans-board-listpackage { margin:0 !important; }
+</style>
+
+</div></div>
+<div id="dj-maz"> 
+    
+<div module="board_title_4">
+<div class="titleArea">
+    <h2>매거진</h2>
+</div>
+</div>
+    
+    
+
+<div module="Board_ListPackage_5">
+  <div class="maz_list">       
+    <!--@css(/_dj/css/dj-maz.css)--> 
+        <div module="board_list_5">
+            <!--
+                $count = 30
+                $product_name_cut = 30
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+            <ul><!--@import(/_dj/page/magazine/item_list.html)--></ul>
+        </div>
+        <div module="board_ButtonList_5" class="{$write_display|display} write_btn" style="clear:both;  text-align:center;">
+        <span class="gRight">
+            <a href="/board/product/write.html{$param_write}" class="dj-btn-3 {$write_display|display}">글쓰기</a>
+        </span>
+        </div>
+    </div>
+</div>   
+      
+<div module="board_paging_5" class="ec-base-paginate" style="padding:20px 0 0; clear:both;">
+    <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+</div>
+
+    
+<div style="height:50px;"></div>
+  
+     

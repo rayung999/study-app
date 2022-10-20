@@ -1,0 +1,36 @@
+<div class="reviewArea">
+    <!-- 비동기로 전달할 템플릿 영역(반드시 포함이 되어있어야함) -->
+    <div id="ec-board-write-wrapper" style="display:none;">
+    </div>
+    <div async_module="smartreview_dispWrite" async_type="template">
+        <!-- 비동기로 처리전 노출되는 섹션 -->
+        <div async_section="before" style="display:none;">
+            <div class="loadingBar">
+                <p>처리중입니다. 잠시만 기다려 주세요.</p>
+                <img src="//img.echosting.cafe24.com/suio/ico_loading.gif" alt="" />
+            </div>
+        </div>
+        <!-- 비동기로 처리된 이후 노출되는 섹션 -->
+        <div async_section="after" style="display:none;">
+            <div id="ec-board-review-write">
+                <div class="dimmed"></div>
+                <div class="reviewLayer typeWrite ec-board-review-wrap">
+                    <h2>리뷰작성</h2>
+                    <div class="content">
+                        <!--@import(/board/smartreview/provider/write_form.html)-->
+                        <div class="btnArea">
+                            <a href="#none" id="ec-board-review-write-button"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/review/btn_review_write.gif" alt="리뷰작성" /></a>
+                        </div>
+                    </div>
+                    <div class="close">
+                        <button type="button" class="btnClose" id="ec-board-review-write-close-button">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 비동기 실패시 노출되는 섹션 -->
+        <div async_section="error" style="display:none;">
+            error
+        </div>
+    </div>
+</div>

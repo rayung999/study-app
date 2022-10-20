@@ -1,0 +1,149 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/_dj/css/list.css)-->
+<!--@js(/_dj/js/adjust_soldcount_list.js)-->
+
+<div id="wrap_sidebar_right">
+<div class="on" id="section_on_off">
+    <!--★ 오른쪽 플로팅 사이드바 ★-->
+    <!--@import(/_dj/page/layout/sidebar_right.html)--> 
+</div>
+    
+<div class="container_inner">
+    <div module="Product_menupackage">
+        <!--@css(/css/module/product/menupackage.css)-->
+        <!--@js(/js/module/product/menucategory.js)-->
+    
+        <div class="title" module="product_headcategory">
+            <p class="title_img ">{$title_image}</p>
+            <h2><span>{$title_text}</span></h2>
+        </div>
+        
+        <!-- 서브메뉴 카테고리 -->
+        <div id="submenuCategory">
+        <ul class="menuCategory item1">
+            <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+            <!--<li module="product_displaycategory" style="display:{$display};" class="{$selected} dj-mov-left-right2">-->
+            <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+                <a href="{$link_product_list_sub}" class="sub_name">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+                <ul module="product_children">
+                    <div class="arrow_icon"><img src="/_dj/img/item_list_middle_menu_arrow.png" /></div>
+                    <div class="sub_menu">
+                    <li class="{$selected}">
+                        <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="{$selected}">
+                        <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </div>
+                </ul>
+            </li><!-- //참고 -->
+        </ul>
+        </div>
+        <!-- END: 서브메뉴 카테고리 -->
+        
+        
+        <!-- 정렬 -->
+        <div module="product_normalmenu" class="item2">
+            <!--
+                $compare_page = /product/compare.html
+            -->
+            <!--<div class="title" id="{$listmenu_position}">
+                <h3><span>HIT PRODUCT</span></h3>
+            </div>-->
+            <div class="function">
+                <!--<p class="prdCount">등록 제품 : <strong>{$total_count}</strong>개</p>-->
+                <ul id="type" module="product_Orderby">
+                    <li><a href="{$param}" {$style}>{$sort_name}</a></li>
+                    <li><a href="{$param}" {$style}>{$sort_name}</a></li>
+                </ul>
+                <span class="compare {$product_compare_display|display}"><a href="#none" onclick="{$product_compare_action}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_compare.gif" alt="상품비교" /></a></span>
+            </div>
+        </div>
+        <!-- END: 정렬 -->
+    </div><!-- END: Product_menupackage -->
+        
+    
+    
+    
+    <div id="category_top_banner">
+        <!--<div module="product_headcategory" class="dj-mov-fade2">--> 
+        <div module="product_headcategory"> 
+            <p class="title_bg"></p>
+                 {$top_image1_tag}
+                 {$top_image2_tag}
+                 {$top_image3_tag}
+        </div>    
+    </div>  
+    
+    
+    
+    
+    <!-- 추천상품 -->
+    <div module="product_listrecommend" class="dj-product">
+        <div class="recommend_inner">
+          <div id="all_title">
+            <h2>BEST ITEMS</h2>
+            <p class="line"></p>
+        </div>
+        <!--
+            $count = 3
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <ul class="prdList grid4 hide_spec white">
+            <!--@import(/_dj/page/product/item_list.html)-->
+            <!--@import(/_dj/page/product/item_list.html)-->
+        </ul>
+        </div>
+    </div><!-- //추천상품 -->
+    
+    
+    <!-- 일반상품 -->
+    <div module="product_normalpackage">
+        <!--@css(/css/module/product/listnormal.css)-->
+        <div module="product_listnormal" class="dj-product">
+            <!--
+                $count = 52
+                    ※ 노출시킬 상품의 갯수를 숫자로 설정할 수 있습니다.
+                    ※ 상품 노출갯수가 많으면 쇼핑몰에 부하가 발생할 수 있습니다.
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+            <ul class="prdList grid4"> 
+                <!--@import(/_dj/page/product/item_list.html)-->
+                <!--@import(/_dj/page/product/item_list.html)-->
+            </ul>
+        </div>
+    </div>
+    
+    <div module="product_normalpaging" class="ec-base-paginate">
+        <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+        <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+        <ol>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        </ol>
+        <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+        <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+    </div>
+    <!-- //일반상품 -->
+        
+    </div><!-- //container_inner -->
+</div><!-- //wrap_sidebar_right -->

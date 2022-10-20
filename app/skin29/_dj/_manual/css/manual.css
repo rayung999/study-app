@@ -1,0 +1,6 @@
+#dj_manual .xmp.margin { margin:0; padding:2px 0; }
+#dj_manual .inner ul.contents li.info { line-height:1.7 }
+#dj_manual .inner ul.contents li.info ul p { padding:5px 0 10px }
+
+#dj_manual .inner ul.contents li.info .m_go_btn { font-size:13px }
+#dj_manual .tap_list strong {  color:#ff0000 }

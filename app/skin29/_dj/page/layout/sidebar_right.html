@@ -1,0 +1,106 @@
+<!-------------------------------------------------------------------------------------------------------------------------------------
+
+   ◀◀◀◀◀ 오른쪽 플로팅 사이드바 ◀◀◀◀◀
+
+   ※ 사용하고싶은 페이지에 @import(/_dj/page/layout/sidebar_right.html) 코드를 넣어주시면 됍니다.
+
+   ※ import를 할때 사이드바가 움직일 수 있는 범위를 **반드시** 지정해 주셔야합니다. 
+	  시작범위에 <div id="wrap_sidebar_right"> 를 넣어주시고 끝나는 범위에 </div>를 넣어주시면 됍니다.
+
+   ※ 사이드바의 크기를 바꾸고 싶으시면 css 임폴트 파일을 바꿔주시면 됍니다
+	  디폴트: css(/_dj/css/sidebar_right.css) 
+	  스몰: css(/_dj/css/sidebar_right_small.css) 
+
+--------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_dj/css/sidebar_right_small.css)-->
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	//variables
+	var $window = $(window);
+	var $container = $("#sidebar_right");
+	var $main = $("#wrap_sidebar_right");
+	var window_min = 0;
+	var window_max = 0;
+	var threshold_offset = 5000;
+	/*
+	 set the container's maximum and minimum limits as well as movement thresholds
+	*/
+	function set_limits(){
+		//max and min container movements
+		var max_move = $main.offset().top + $main.height() - $container.height() - 2*parseInt($container.css("top") );
+		var min_move = $main.offset().top;
+		//save them
+		$container.attr("data-min", min_move).attr("data-max",max_move);
+		//window thresholds so the movement isn't called when its not needed!
+		//you may wish to adjust the freshhold offset
+		window_min = min_move - threshold_offset;
+		window_max = max_move + $container.height() + threshold_offset;
+	}
+	//sets the limits for the first load
+	set_limits();
+
+	function window_scroll(){
+		//if the window is within the threshold, begin movements
+		if( $window.scrollTop() >= window_min && $window.scrollTop() < window_max ){
+			//reset the limits (optional)
+			set_limits();
+			//move the container
+			container_move();
+		}
+	}
+	$window.bind("scroll", window_scroll);
+
+	/**
+	 * Handles moving the container if needed.
+	**/
+	function container_move(){
+		var wst = $window.scrollTop();
+		//if the window scroll is within the min and max (the container will be "sticky";
+		if( wst >= $container.attr("data-min") && wst <= $container.attr("data-max") ){
+			//work out the margin offset
+			var margin_top = $window.scrollTop() - $container.attr("data-min")+60;
+			//margin it down!
+			$container.css("margin-top", margin_top);
+		//if the window scroll is below the minimum 
+		}else if( wst <= $container.attr("data-min") ){
+			//fix the container to the top.
+			$container.css("margin-top",0);
+		//if the window scroll is above the maximum 
+		}else if( wst > $container.attr("data-max") ){
+			//fix the container to the top
+			$container.css("margin-top", $container.attr("data-max")-$container.attr("data-min")+"px" );
+            
+		}
+	}
+	//do one container move on load
+	container_move();
+});
+</script>
+
+<div id="sidebar_right">
+         <!--배너이미지 플로팅 사이드바-->
+        							      <a href="/article/공지사항/1/3173/"><img class="sidebar_image" src="/web/upload/category/editor/2020/12/09/d061b9546c8781942bcfed21d7956672.jpg"/></a>
+        <p class="sidebar_right_btn">     <a href="/article/event/2/135/">가입이벤트</a></p>
+    	<p class="sidebar_right_btn_cont"><a href="/article/event/2/2359/">리뷰이벤트</a></p>
+        <p class="sidebar_right_btn_cont"><a href="https://www.cjlogistics.com/ko/tool/parcel/tracking" target="_blank">배송 조회</a></p>
+        
+        <!--최근본 상품 플로팅 사이드바-->
+        <p class="sidebar_right_recentview_btn">
+        	<div module="Layout_productRecent">
+    		<p class="player"><img src="/_dj/img/baseline_expand_less_black_18dp_small.png" alt="이전 제품" class="prev" /></p>
+    			<h2><a href="/product/recent_view_product.html">최근 본 상품</a></h2>
+    			<ul>
+        		<li class="{$disp_recent|display}">
+            		<a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><!--<span>{$name}</span>--></a>
+        		</li>
+        		<li class="{$disp_recent|display}">
+            		<a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><!--<span>{$name}</span>--></a>
+        		</li>
+    			</ul>
+    		<p class="player"><img src="/_dj/img/baseline_expand_more_black_18dp_small.png" alt="다음 제품" class="next" />
+        	</p>
+			</div>
+		</p>
+</div>

@@ -1,0 +1,64 @@
+<li id="anchorBoxId_{$product_no}" class="item_list">
+    <div class="item_list_box">
+            <div class="thumbnail">
+                <!--div class="button">
+                      <ul class="other">
+                        <li class="option">{$option_preview_icon}<span>옵션보기</span></li>
+                        <li class="cart"><a href="#none">{$basket_icon}</a><span>장바구니</span></li>
+                        <li class="zoom"><a href="#none">{$zoom_icon}</a><span>확대보기</span></li>
+                        <li class="pop"><a href="{$link_product_detail}" target="blank"><img src="/_dj/img/button_other_04.png" /></a><span>새창보기</span></li>
+                      </ul>
+                  </div-->
+                  <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+                        <img src="{$image_medium}" id="{$image_medium_id}" class="thumb_Img" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></span>
+                    </a>              
+                </div>
+            </div>
+    
+            <div class="description" onclick="window.location.href='{$link_product_detail}';">
+                <div class="inner">
+                   <strong class="name" display="font-weight:lighter;"><a href="{$link_product_detail}" class="{$product_name_display|display}">{$product_name}</a></strong>
+                   <ul class="spec">
+                       <li class="summary_line {$summary_desc|display}"></li>         
+                       
+                       <li class="price_all">
+                           <div class="grid-container">
+                                <!-- 할인률 -->
+                               <div class="item1">
+                                   <!-- 세일가격 -->
+                                   <span>특별 할인가</span>
+                                   <!-- END: 세일가격 -->
+                                   <br>
+                                   <div id="saleprice_compare_list" class="custom_pro {$product_custom|display}" d-price="{$product_custom}" d-custom="{$product_price}"></div>
+                                </div>
+                           		<!-- END: 할인률 -->
+                               <!-- 가격 -->
+                               <div class="item2">
+                                   <span class="custom {$product_custom|display}">{$disp_product_custom}</span>
+                                   <br>
+                                   <!-- 세일가격 -->
+                                   <span class="sale {$prd_price_sale|display}">{$prd_price_sale}</span> 
+                                   <span class="price {$prd_price_sale|display} {$product_price|display} ">
+                                        <span class="pri">{$disp_product_price}</span>
+                                        <span class="strike">{$disp_product_price}</span>
+                                    </span>
+                                   <!-- END: 세일가격 -->
+                                </div>
+                            <!-- END: 가격 -->
+                               
+                               <div class="item3">
+                                   <div class="icon">
+                       <!--<div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div>-->
+                   </div>
+                                   </div>
+                       		</div>
+                           </li>
+                   </ul>
+                       
+                   </div>
+             </div>
+         </div>
+</li>
+
+

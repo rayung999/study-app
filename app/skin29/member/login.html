@@ -1,0 +1,37 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>로그인</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>LOGIN</h2>
+</div>
+
+
+
+<!--@import(/_dj/page/login_layout.html)-->
+
+<div module="MyShop_OrderHistoryNologin">
+    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+    <!--
+        $orderDetailUrl = /myshop/order/detail.html
+    -->
+    <h3>비회원 주문조회</h3>
+
+    <ul>
+        <li><strong>이름</strong> {$form.order_name}</li>
+        <li class="number"><strong>주문번호</strong> {$form.order_id}</li>
+        <li><strong>비밀번호</strong> {$form.order_password}</li>
+    <p class="button"><input type="image" src="/_dj/img/btn_nomember_login.png" alt="조회" /></p>
+</div>
+    
+<div style="height:30px; overflow:hidden"></div>
+
+
+    
+    

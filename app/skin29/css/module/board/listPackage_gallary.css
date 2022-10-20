@@ -1,0 +1,77 @@
+/***************** 기본형 (배너형으로 디자인을 바꿀시 배너형 코멘팅을 해제해 주시고 기본형을 코멘팅 해주세요) *******************/
+.xans-board-listpackage-8 .boardSort { float:left; margin:0 0 10px; }
+ul.xans-board-listheader-8 { text-align:right; margin:0 0 10px; }
+ul.xans-board-listheader-8 li { display:inline; }
+.xans-board-listpackage-8 { margin:0 0 20px; }
+.xans-board-listpackage-8 .notice { margin:0 0 20px; border:1px solid #d7d5d5; border-bottom:0; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; color:#757575; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description { padding:15px 0 0 205px; line-height:18px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink { float:left; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink img { width:187px; border:1px solid #ececec; display:block; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; color:#757575; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description { padding:15px 0 0 205px; line-height:18px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink { float:left; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink img { width:187px; border:1px solid #ececec; display:block; }
+.xans-board-listpackage-8 .xans-board-list-8 { clear:both; overflow:hidden; }
+.xans-board-listpackage-8 .xans-board-list-8 ul { width:100%; min-width:756px; margin:-20px 0 0; font-size:0; line-height:0; }
+.xans-board-listpackage-8 .xans-board-list-8 li { display:inline-block; *display:inline; *zoom:1; width:20%; margin:20px 0 40px 0; font-size:12px; color:#757575; line-height:18px; vertical-align:top; }
+.xans-board-listpackage-8 .xans-board-list-8 li .imgLink img { display:block; width:187px; height:255px; margin:0 auto 10px;  }
+.xans-board-listpackage-8 .xans-board-list-8 li .boardChk { display:block; margin:0 auto 10px; }
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink,
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink:hover { display:block; width:189px; margin:0 auto; color:#2e2e2e; }
+.xans-board-listpackage-8 .xans-board-list-8 li span { display:block; margin:15px auto 0; width:189px;}
+.xans-board-listpackage-8 .xans-board-list-8 li strong { font-weight:normal; }
+.xans-board-listpackage-8 .xans-board-list-8 li em { display:block; font-style:normal; }
+.xans-board-listpackage-8 .boardListEmpty { margin:0 0 20px; text-align:center; }
+
+/***************** 배너형 *******************/
+/*
+.xans-board-listpackage-8 .boardSort { float:left; margin:0 0 10px; }
+ul.xans-board-listheader-8 { text-align:right; margin:0 0 10px; }
+ul.xans-board-listheader-8 li { display:inline; }
+.xans-board-listpackage-8 { margin:0 0 20px; }
+.xans-board-listpackage-8 .notice { margin:0 0 20px; border:1px solid #d7d5d5; border-bottom:0; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 li { overflow:hidden; padding:15px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description { padding:15px 0 0 205px; line-height:18px; display: none; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink { float:left; overflow: hidden; width:1055px; height: 150px; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink img { width:inherit; height: inherit; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; color:#757575; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description { padding:15px 0 0 205px; line-height:18px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink { float:left; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink img { width:187px; border:1px solid #ececec; display:block; }
+.xans-board-listpackage-8 .xans-board-list-8 { clear:both; overflow:hidden; }
+.xans-board-listpackage-8 .xans-board-list-8 ul { width:100%; min-width:756px; margin:-20px 0 0; font-size:0; line-height:0; }
+.xans-board-listpackage-8 .xans-board-list-8 li { display:inline-block; *display:inline; *zoom:1; width:20%; margin:20px 0 40px 0; font-size:12px; color:#757575; line-height:18px; vertical-align:top; }
+.xans-board-listpackage-8 .xans-board-list-8 li .imgLink img { display:block; width:187px; height:255px; margin:0 auto 10px;  }
+.xans-board-listpackage-8 .xans-board-list-8 li .boardChk { display:block; margin:0 auto 10px; }
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink,
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink:hover { display:block; width:189px; margin:0 auto; color:#2e2e2e; }
+.xans-board-listpackage-8 .xans-board-list-8 li span { display:block; margin:15px auto 0; width:189px;}
+.xans-board-listpackage-8 .xans-board-list-8 li strong { font-weight:normal; }
+.xans-board-listpackage-8 .xans-board-list-8 li em { display:block; font-style:normal; }
+.xans-board-listpackage-8 .boardListEmpty { margin:0 0 20px; text-align:center; }
+*/

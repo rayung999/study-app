@@ -1,0 +1,131 @@
+
+/* 페이드인 */
+.dj-mov-fade { transition: all 0.5s; animation:dj-mov-fade 2s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-fade  {
+      0%   { opacity:0; }
+      100% { opacity:1; }
+}
+@-webkit-keyframes dj-mov-fade  {
+      0%   { opacity:0; }
+      100% { opacity:1;  }
+}
+
+
+/* 페이드인2 */
+.dj-mov-fade2 { transition: all 0.5s; animation:dj-mov-fade2 1s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-fade2  {
+      0%   { opacity:0.5; }
+      100% { opacity:1; }
+}
+@-webkit-keyframes dj-mov-fade  {
+      0%   { opacity:0.5; }
+      100% { opacity:1;  }
+}
+
+
+/* 왼쪽 > 오른쪽으로 */
+.dj-mov-left-right { transition: all 0.5s; animation: dj-mov-left-right 2s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-left-right  {
+      0%   { opacity:0; margin:0 0 0 -100px; }
+      100% { margin: 0 0 0 0; }
+}
+@-webkit-keyframes  dj-mov-left-right  {
+      0%   { opacity:0; margin:0 0 0 -100px; }
+      100% { margin: 0 0 0 0; }
+}
+
+
+/* 왼쪽 > 오른쪽으로2 */
+.dj-mov-left-right2 { transition: all 0.3s; animation: dj-mov-left-right2 1s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-left-right2  {
+      0%   { opacity:0; margin:0 0 0 -10px; }
+      100% { margin: 0 0 0 0; }
+}
+@-webkit-keyframes  dj-mov-left-right2  {
+      0%   { opacity:0; margin:0 0 0 -10px; }
+      100% { margin: 0 0 0 0; }
+}
+
+
+/* 오른쪽 > 왼쪽으로 */
+.dj-mov-right-left { transition: all 0.5s; animation:dj-mov-right-left 2s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-right-left  {
+      0%   { opacity:0; margin:0 0 0 100px; }
+      100% { margin: 0 0 0 0; }
+}
+@-webkit-keyframes  dj-mov-right-left  {
+      0%   { opacity:0; margin:0 0 0 100px; }
+      100% { margin: 0 0 0 0; }
+}
+
+/* 오른쪽 > 왼쪽으로 3초 딜레이 */
+.dj-mov-right-left-delay { opacity:0; animation-name: dj-mov-right-left-delay; animation-duration: 3s; animation-delay: 1.2s; animation-timing-function:ease;  animation-direction: normal; animation-fill-mode :forwards }
+@keyframes dj-mov-right-left-delay  {
+      0%   { opacity:0; margin:0 0 0 100px;   }
+      100% { opacity:1; margin: 0 0 0 0; }
+}
+@-webkit-keyframes  dj-mov-right-left-delay  {
+      0%   { opacity:0; margin:0 0 0 100px; }
+      100% { opacity:1; margin: 0 0 0 0; }
+}
+
+
+/* 위 > 아래로 */
+.dj-mov-top-bottom { transition: all 0.5s; animation:dj-mov-top-bottom 2s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-top-bottom  {
+      0%   { opacity:0; margin:-100px 0 0; }
+      100% { margin: 0 0 0 0; }
+}
+@-webkit-keyframes  dj-mov-top-bottom  {
+      0%   { opacity:0;  margin:-100px 0 0; }
+      100% { margin: 0 0 0 0; }
+}
+
+/* 위 > 아래로 - 매거진전용 */
+.dj-mov-top-bottom2 { transition: all 0.3s; animation:dj-mov-top-bottom2 1s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-top-bottom2  {
+      0%   { opacity:0; margin:-20px 0 23px; }
+      100% { margin: 0 0 25px 0; }
+}
+@-webkit-keyframes  dj-mov-top-bottom2  {
+      0%   { opacity:0;  margin:-20px 0 0; }
+      100% { margin: 0 0 25px 0; }
+}
+
+/* 아래 > 위로 */
+.dj-mov-bottom-top { transition: all 0.5s; animation:dj-mov-bottom-top 2s 1;  animation-timing-function:ease; animation-direction: normal; }
+@keyframes dj-mov-bottom-top 
+      0%   { opacity:0; margin:0 0 100px; }
+      100% { margin: 0 0 0 ; }
+}
+@-webkit-keyframes dj-mov-bottom-top   {
+      0%   { opacity:0;  margin:0 0 100px; }
+      100% { margin: 0 0 0; }
+}
+
+
+/* 페이드인-아웃-반복 */
+.dj-mov-fade-in-out { transition: all 0.1s; animation:dj-mov-fade-in-out 0.5s infinite; animation-direction: alternate;; }
+@keyframes dj-mov-fade-in-out {
+      0%   { color:#aaa; }
+      100%   { color:#fff; }
+}
+@-webkit-keyframes dj-mov-fade-in-out   {
+      0%   { color:#fff; }
+      100%   { color:#000; }
+}
+
+
+/* 페이드인-아웃-반복 2 */
+.dj-mov-fade-in-out2 { transition: all 0.1s; 
+    /*animation:dj-mov-fade-in-out2 0.5s infinite;*/ 
+    animation-direction: alternate;; }
+@keyframes dj-mov-fade-in-out2 {
+      0%   { color:#aaa; }
+      100%   { color:#fff; }
+}
+@-webkit-keyframes dj-mov-fade-in-out2   {
+      0%   { color:#aaa; }
+      100%   { color:#000; }
+}
+

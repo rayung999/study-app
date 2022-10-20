@@ -1,0 +1,29 @@
+ <div class="member_menu">
+                <div class="inner">
+                <ul>
+                    <li module="Layout_statelogoff" class="mem">
+                    <a href="#dj-pop-con" class="list">LOG-IN</a>                    
+                        <div class="dj-pop-con"  id="dj-pop-con">
+                            <div class="pop_inner"><a href="#close" class="close_btn"><img src="/_dj/img/pop_close_btn.png" /></a><!--@import(/member/login.html)--></div>
+                        </div>
+                    <a href="/member/join.html" class="list">JOIN</a>
+                    </li>
+
+                    <li module="Layout_stateLogon" class="list mem">
+                    <a href="/member/modify.html">EDIT</a>
+                    <a href="{$action_logout}" class="log">LOGOUT</a>
+                    </li>
+        
+                    <li class="list">
+                        <div>
+                            <ul>
+                                <li><span class="{$use_basket_cnt|display}"><a href="/order/basket.html">CART </a></span><div module="Layout_orderBasketcount">{$basket_count}</div></li>
+                                <li><a href="/myshop/index.html">MYPAGE</a></li>
+                                <!--<li><a href="/myshop/order/list.html">ORDER</a></li>-->  
+                             </ul>
+                          </div>
+                    </li>
+
+                </ul>        
+                </div>
+                </div>

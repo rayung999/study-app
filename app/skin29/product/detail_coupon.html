@@ -1,0 +1,38 @@
+
+    <!-- 쿠폰 다운로드 -->
+    <div module="coupon_productdetail">
+        <!--
+            $coupon_down_result_url = /coupon/coupon_down_result.html
+        -->
+        <!--@css(/css/module/coupon/productDetail.css)-->
+        <div class="title">
+            <h3><span>쿠폰 다운로드</span></h3>
+            <p class="button"><a href="#none" id="btn_all_coupondown"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_coupon_down.gif" alt="전체쿠폰다운받기" /></a></p>
+        </div>
+        <div class="couponSkinArea">
+            <ul class="grid">
+                <li>
+                    <div class="coupon_bar"><img src="/_dj/img/coupon_red_bar_icon.png" /></div>
+                    <div class="coupon {$background_class}">
+                        <div class="detail" {$call_coupon_detail}>
+                            <strong class="title">{$coupon_name|cut:17,...}</strong>
+                            <p class="discount"><span>{$coupon_content}</span></p>
+                            <p class="period">{$coupon_period}</p>
+                        </div>
+                        <div class="button"><a href="{$coupon_issue_url}">DOWNLOAD</a></div>
+                    </div>
+                </li>
+               <li>
+                   <div class="coupon_bar"><img src="/_dj/img/coupon_red_bar_icon.png" /></div>
+                    <div class="coupon {$background_class}">
+                        <div class="detail" {$call_coupon_detail}>
+                            <strong class="title">{$coupon_name|cut:17,...}</strong>
+                            <p class="discount"><span>{$coupon_content}</span></p>
+                            <p class="period">{$coupon_period}</p>
+                        </div>
+                        <div class="button"><a href="{$coupon_issue_url}">DOWNLOAD</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!-- //쿠폰 다운로드 -->

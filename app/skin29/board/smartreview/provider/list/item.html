@@ -1,0 +1,178 @@
+<!--
+    참고 : 이 페이지는 리뷰 아이템입니다
+    사용되는 페이지들 : 상품상세 리뷰 목록, 해시태그 모아보기, 작성자글 모아보기, 리뷰 목록
+-->
+<li class="ec-board-list-item" data-bulletin-no="{$*bulletin_no}">
+    <div class="prdInfo {$*display_product_info_visible_class}">
+        <p class="reviewThumb">
+            <a href="/product/detail.html?product_no={$*prd_no}">{$*display_product_image_tag}</a>
+        </p>
+        <div class="info">
+            <dl class="{$*display_rating_visible_class}">
+                <dt>평점</dt>
+                <dd>{$*display_product_info_rating_avg}</dd>
+            </dl>
+            <dl>
+                <dt>리뷰</dt>
+                <dd>{$*display_product_info_review_count}</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="reviewInfo">
+        <div class="summary">
+            <p class="product {$*display_product_info_visible_class}"><a href="/product/detail.html?product_no={$*prd_no}"><strong>{$*product_name|cut:50,...}</strong></a></p>
+            <div class="prdOption typeSimple {$*display_product_info_visible_class} {$*product_option_info_display}">
+                <p class="normal {$*normal_product_info_display}"><span class="option">{$*display_product_option_info}</span></p>
+                <ul class="set {$*set_product_info_display}">
+                    {$*display_product_set_info}
+                </ul>
+            </div>
+            <div class="writer">
+                <div class="ec-board-grade small {$*display_rating_type_class} {$*display_rating_visible_class}">
+                    {$*display_bulletin_rating_small_tpl}
+                </div>
+                {$*display_group_icon} {$*display_nick_icon} <a href="/board/smartreview/collect_writer.html?convert_id={$*convert_id}" class="ec-board-member-link" data-writer="{$*display_writer}"><strong>{$*display_writer}</strong></a>
+                <div class="info">
+                    <dl>
+                        <dt>좋아요 : </dt>
+                        <dd class="ec-board-like">{$*display_like_count}</dd>
+                    </dl>
+                    <dl>
+                        <dt>조회수 : </dt>
+                        <dd>{$*display_hit_count}</dd>
+                    </dl>
+                    <dl>
+                        <dt>작성일 : </dt>
+                        <dd>{$*display_writen_date}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="simple">
+            <div class="thumbList {$*display_bulletin_thumbnail_list_visible_class}">
+                <ul>
+                    {$*display_bulletin_thumbnail_list}
+                </ul>
+            </div>
+            <div class="prdOption typeSimple {$*product_option_info_display} {$*product_option_info_visible_display}">
+                <p class="normal {$*normal_product_info_display}"><span class="option">{$*display_product_option_info}</span></p>
+                <ul class="set {$*set_product_info_display}">
+                    {$*display_product_set_info}
+                </ul>
+            </div>
+            <a href="#none" class="heading ec-board-list-toggle">
+                <span class="icon {$*display_best_icon_visible_class}">{$*display_best_icon_url}</span>
+                     <span class="icon {$*display_mobile_icon_visible_class}">{$*display_mobile_icon_url}</span>
+                <span class="icon {$*display_new_icon_visible_class}">{$*display_new_icon_url}</span> {$*display_subject_long_100}
+            </a>
+            <div class="community">
+                <span class="comment {$*display_comment_visible_class}"><a href="#none" class="ec-board-list-toggle ">댓글 <strong class="count ec-board-comment-count">{$*comment_cnt}</strong></a></span>
+                <div class="social">
+                    <button type="button" class="btnLike {$*display_like_selected} {$*display_board_list_sns_btn_id}" onclick="{$*display_social_like_link_onclick}">좋아요</button>
+                    <button type="button" class="btnShare {$*display_sns_share_visible_class}">공유하기</button>
+                    <div class="shareLayer">
+                        <ul>
+                            <li class="{$*sns_share_facebook_display}"><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_facebook.gif" alt="페이스북" /> <a href="#none" data-sns-share="facebook">페이스북</a></li>
+                            <li><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_kakao_story.gif" alt="카카오스토리" /> <a href="#none" data-sns-share="kakaostory">카카오스토리</a></li>
+                            <li class="{$*display_sns_share_instagram_class}"><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_instagram.gif" alt="인스타그램" /> <a href="#none" data-sns-share="instagram">인스타그램</a></li>
+                        </ul>
+                        <span class="edge"></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnToggle ec-board-list-toggle">리뷰펼치기</button>
+        </div>
+        <div class="detail {$*display_board_list_read_id}">
+            <div class="loading">
+                <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요" />
+            </div>
+        </div>
+    </div>
+</li>
+<li class="ec-board-list-item" data-bulletin-no="{$*bulletin_no}">
+    <div class="prdInfo {$*display_product_info_visible_class}">
+        <p class="reviewThumb">
+            <a href="/product/detail.html?product_no={$*prd_no}">{$*display_product_image_tag}</a>
+        </p>
+        <div class="info">
+            <dl class="{$*display_rating_visible_class}">
+                <dt>평점</dt>
+                <dd>{$*display_product_info_rating_avg}</dd>
+            </dl>
+            <dl>
+                <dt>리뷰</dt>
+                <dd>{$*display_product_info_review_count}</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="reviewInfo">
+        <div class="summary">
+            <p class="product {$*display_product_info_visible_class}"><a href="/product/detail.html?product_no={$*prd_no}"><strong>{$*product_name|cut:50,...}</strong></a></p>
+            <div class="prdOption typeSimple {$*display_product_info_visible_class} {$*product_option_info_display}">
+                <p class="normal {$*normal_product_info_display}"><span class="option">{$*display_product_option_info}</span></p>
+                <ul class="set {$*set_product_info_display}">
+                    {$*display_product_set_info}
+                </ul>
+            </div>
+            <div class="writer">
+                <div class="ec-board-grade small {$*display_rating_type_class} {$*display_rating_visible_class}">
+                    {$*display_bulletin_rating_small_tpl}
+                </div>
+                {$*display_group_icon} {$*display_nick_icon} <a href="/board/smartreview/collect_writer.html?convert_id={$*convert_id}" class="ec-board-member-link" data-writer="{$*display_writer}"><strong>{$*display_writer}</strong></a>
+                <div class="info">
+                    <dl>
+                        <dt>좋아요 : </dt>
+                        <dd class="ec-board-like">{$*display_like_count}</dd>
+                    </dl>
+                    <dl>
+                        <dt>조회수 : </dt>
+                        <dd>{$*display_hit_count}</dd>
+                    </dl>
+                    <dl>
+                        <dt>작성일 : </dt>
+                        <dd>{$*display_writen_date}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="simple">
+            <div class="thumbList {$*display_bulletin_thumbnail_list_visible_class}">
+                <ul>
+                    {$*display_bulletin_thumbnail_list}
+                </ul>
+            </div>
+            <div class="prdOption typeSimple {$*product_option_info_display} {$*product_option_info_visible_display}">
+                <p class="normal {$*normal_product_info_display}"><span class="option">{$*display_product_option_info}</span></p>
+                <ul class="set {$*set_product_info_display}">
+                    {$*display_product_set_info}
+                </ul>
+            </div>
+            <a href="#none" class="heading ec-board-list-toggle">
+                <span class="icon {$*display_best_icon_visible_class}">{$*display_best_icon_url}</span>
+                     <span class="icon {$*display_mobile_icon_visible_class}">{$*display_mobile_icon_url}</span>
+                <span class="icon {$*display_new_icon_visible_class}">{$*display_new_icon_url}</span> {$*display_subject_long_100}
+            </a>
+            <div class="community">
+                <span class="comment {$*display_comment_visible_class}"><a href="#none" class="ec-board-list-toggle ">댓글 <strong class="count ec-board-comment-count">{$*comment_cnt}</strong></a></span>
+                <div class="social">
+                    <button type="button" class="btnLike {$*display_like_selected} {$*display_board_list_sns_btn_id}" onclick="{$*display_social_like_link_onclick}">좋아요</button>
+                    <button type="button" class="btnShare {$*display_sns_share_visible_class}">공유하기</button>
+                    <div class="shareLayer">
+                        <ul>
+                            <li class="{$*sns_share_facebook_display}"><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_facebook.gif" alt="페이스북" /> <a href="#none" data-sns-share="facebook">페이스북</a></li>
+                            <li><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_kakao_story.gif" alt="카카오스토리" /> <a href="#none" data-sns-share="kakaostory">카카오스토리</a></li>
+                            <li class="{$*display_sns_share_instagram_class}"><img src="//img.echosting.cafe24.com/skin/base/board/review/ico_instagram.gif" alt="인스타그램" /> <a href="#none" data-sns-share="instagram">인스타그램</a></li>
+                        </ul>
+                        <span class="edge"></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnToggle ec-board-list-toggle">리뷰펼치기</button>
+        </div>
+        <div class="detail {$*display_board_list_read_id}">
+            <div class="loading">
+                <img src="//img.echosting.cafe24.com/skin/base/board/review/ico_loading.gif" alt="로딩중입니다. 잠시만 기다려 주세요" />
+            </div>
+        </div>
+    </div>
+</li>
