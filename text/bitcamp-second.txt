@@ -1,0 +1,158 @@
+6/29 2일차 
+
+
+● 컴파일과 인터트리트 
+
+○ 컴파일 방식 프로그래밍 
+
+	(> 명령문을 검사 > 변환 ) 
+hello.c(source) →→→→→→→→→ hello.exe(기계어) →→→→→→→→→  windows 11 (intel cpu)
+		   컴파일	   (>windowsOS intel cpu)	 실행 
+	[ >gcc hello.c > enter ]			> hello
+	[>gcc -o hello.exe hello.c > enter]
+
+	↘↘↘↘↘↘↘↘↘↘   hello.exe (기계어) >>>>>>>>>>>>>      ↘↘↘↘↘↘ Linux (intel cpu)
+	리눅스용 c컴파일러    (>linuxOS intel cpu)	  > 실행되지 않는다. (기계어를 나열한 형식이 다르다.)
+
+( ※Mac도 같은 맥락 )
+
+	
+        ★ > 기계어 파일 실행 
+	> 실행속도 빠르다.
+	> 컴파일 할 때 명령문을 검사
+	> 명령어를 실행하기 전에 명령문에 오류가 있는지 알 수 있다.
+
+
+
+
+○ 인터프리트 방식 프로그래밍 
+						    [>node hello.js > enter]
+hello.js(source) →→→→→→→→→   자바스크립트 인터프리터 →→→→→→→→→→→→ windows 11(intel cpu)
+		load(읽기)	(j.s player runtime)		   실행
+						      (> 명령문을 검사 > 변환 > 실행) 
+
+		( J.S Engine/Interpreter/Player/Runtime : 다 같은 말이지만 Engine을 많이 씀	)	
+
+( ※Mac, Linux - intel cpu도 같은 맥락 )
+
+
+        ★ > 소스파일을 load(읽어서)해서 실행 
+	> 실행속도가 느리다.
+	> 명령어를 실행하기 전에는 명령문에 오류가 있는지 알 수 없다.
+		- 버그가 늦게 발견됨 ( 사용할 때 안전성 떨어짐 )
+	> 소스코드 노출 !!  
+		- 프로그래밍 자산 보호가 불가능
+		- 해커가 소스분석해서 해킹 가능성 up 
+	>서버에선 사용, 개인의 PC에서는 X
+
+
+
+
+○ hybrid 프로그래밍  " Write once, Run anywhere! "  ( 컴파일, 인터프리트 방식 혼합된, )   - 자바 
+
+
+1. (1일차 메모 참고) 컴파일 방식
+	 .java (명령문) →→→→→→→→  .class (bytecode)        ★ - 문법 오류 검사
+		 	   컴파일				- 명령문 최적화 		
+								> 실행 명령수 감소	
+		*bytecode=P(portable)-code				> 실행 속도 증가
+		=특정 하드웨어가 아닌 가상 컴에서 돌아가는	- 가상 기계어로 변환 	
+			 시행프로그램을 위한 이진표현법		> 소스노출	
+								> 프로그래밍 자산 보호 
+
+	
+2. (1일차 메모 참고) Bytecode 실행 한계 극복 
+
+> 기존의 컴파일 방식 : .class에서 한개의 코드 Load > JVM > OS에서 실행
+	
+> Just-in-Time(JIT) 컴파일 : 실행할 때마다 일부 코드를 진짜 기계어로 바꿔 JVM로 변환시켜 실행
+			- 적시생산방식 (JIT)
+			- AOT보다 설치속도가 빠르지만 실행속도는 느림	
+			- AOT보다 용량이 작음
+				
+> Ahead of Time(AOT) 컴파일 : 다운로드 후 설치 시점에 전체 bytecode를 진짜 기계어로 변환해서 ROM에 저장
+			- 안드로이드에서 사용
+			- JIT보다 설치속도는 느리지만 실행속도가 빠름
+			- JIT보다 용량이 큼
+
+
+
+3. CPU - OS - JDK
+
+ # App. -> Intel CPU 기계어		→	# macOS	    → 	# Intel CPU -> CISC계열 CPU	
+
+ # App. -> ARM CPU 기계어		→	# macOS	    →	＃M1/M2 (ARM) -> RISC계열 CPU
+								- ARM에게 CPU설계도를 구매해서 
+								만든 것이 M1/M2/엑시노스	
+
+         |-----------실행속도 느림---------------|
+ # App. (Intel)   → 	# Intel>ARM변환기	     →	# macOS      →	# M1/M2	
+				-Emulator(Rosetta)
+      
+	
+
+*CISC 명령어 문법이 복잡하고 용량이 적음
+*RISC 명령어 문법이 단순하고 용량이 큼 
+
+4. JDK 종류 
+
+Open JDK 오픈소스	       +알파 	+ Oracle JDK → Graalvm	
+		     (추가성능)	+ IBM JDK
+				+ Amazon JDK	
+				+ Azul JDK	
+				                  ....etc.
+
+
+
+
+/*
+-J.S Engine  →→→→→→→→→  V8 + 추가기능
+-	     오픈소스 공개 
+-
+-v8 에 기능을 추가해서 명령프롬프트에서 사용할 수 있게 만든 게 nodeJS.
+*/
+
+
+※ 프롬포트에서 다른 폴더에 들어갈 때 
+			> cd 폴더명 (ex. bitcamp-workspace의 경우 b+Tap 치면 자동변환 해줌)
+			> cd : 체인지 디렉토리 
+
+
+
+
+ 라이브러리  :  https://www.json.org/json-en.html
+
+C언어 : 하드웨어를 제어하는 문법이 있음.
+
+
+
+
+
+
+
+
+
+	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

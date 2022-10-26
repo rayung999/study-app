@@ -1,0 +1,5 @@
+﻿실행 전에 다음 명령어를 실행해주세요.
+
+npm install request
+npm install cheerio
+npm install async

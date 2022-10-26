@@ -1,0 +1,4 @@
+실행 전에 다음 명령어를 실행해주세요.
+
+npm install express@4.14
+npm install socket.io@1.4.8

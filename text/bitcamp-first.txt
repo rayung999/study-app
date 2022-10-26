@@ -1,0 +1,196 @@
+6/28 1일차
+
+엄진영 강사님 
+jinyoung.eom@gmail.com
+github.com/eomjinyoung
+github.com/eomcs
+
+https://www.notion.so/ko-kr  (필기) 
+
+
+(깃허브 사용) git client > [ https://git-scm.com/downloads ]
+
+
+○ 명령창  
+
+C:\Users\bitcamp>git -v    --> 버전 확인
+git version 2.37.0.windows.1
+
+C:\Users\bitcamp>mkdir git           --> 새 폴더 생성
+
+C:\Users\bitcamp>dir   --> 디렉토리 확인
+
+C:\Users\bitcamp\git>git clone https://github.com/eomjinyoung/bitcamp-workspace --> 파일 저장
+
+
+
+
+
+1.서비스 (B to C) : 카카오뱅크, 배달의민족, 당근마켓 등
+
+2.사내직원, 협력사 관리 시스템:  인사, 물류, 협력사관리 등
+
+> (Java, Python, PHP + HTML CSS J.S 사용) - Web Application
+
+
+※ 어플개발 : DB, 툴 등  (C, C++ 사용)   X
+
+
+
+● Software  S/W 
+   1. System s/w : h/w 제어 	 > os ( Windows, Linux, macOS ... etc. )
+		             > Driver ( 하드웨어 제어 ) 
+
+★2. Application s/w : 	> powerpoint, Excel, hwp, web rowser
+			> Bamboo, 카톡, 줌, 포토샵
+			> 네이버메일, 카페
+
+ 	   (1) Standalone : 단독실행 	        > Hwp, Excel, 스타크레프트, 포토샵 ...etc.
+
+	★(2) ClientServer : 네트워킹 필요   > Zoom, 카톡, 네이버메일, LOL ...etc.
+
+		   ¹- 자체통신 규칙 : 전용 client 설치 필요 		> LOL, 카톡, FTP, Zoom ... etc.
+
+		★²- 웹통신 규칙 : 웹브라우저 사용, http, https 통신규칙	> Yes24, 11st, 당근마켓, 쿠팡,
+			(Web Application)				         네이버메일, 웹오피스 ... etc.
+
+			○Web Application○
+
+	           사용 		1) 요청 (+데이터)		         2) 실행
+  Actor(사용자)  →→→→→    Web    →→→→→→→→→→→→→    Web   →→→→→  ★Application (배울 것)
+		           Browser  ←←←←←←←←←←←←←   Server  ←←←←←
+				4) 응답 (결과+화면)		         3) 결과 
+					|
+				     ←	|    →
+		Local			|		Remote
+		(PC)			|	         (원격 컴퓨터)
+					|
+
+
+
+
+● App.  > Java + SQL(data 제어) + XML (설정정보 다루기) + JSON (데이터 표현) + HTML, CSS, J.S (화면 생성)
+           > 보조기술 ( Mybatis, Spring, Servlet/ JSP, AJAX )
+
+
+
+
+● 프로그래밍 시작 ( 예상 커리큘럼 )
+
+1. Standalone App. 	> 프로그래밍 개념 
+			> Java 언어 문법 ------------- 리터럴 ( literal ) : 데이터 표기 
+			> File I/O API		- 변수 ( Variable )
+			> Collection		- 연산자 ( 산술, 비교, 관계, 논리, 조건, 비트 )
+						- 조건문, 반복문
+						- 메서드, 클래스, 패키지 ..... etc.
+					 
+			
+2. Client / Server App.	> 통신 프로그래밍 
+			> 병행 프로그래밍 ------------ Multi-processing
+						 - Multi-tasking
+						 - Multi-threading ..... etc.
+
+
+3. Web App. 		> Servlet/ JSP 기술 
+			> HTML, CSS, J.S
+			> Framework ----------------- Mybatis
+						- Spring ..... etc.
+
+
+
+● 프로그래밍 도구 
+
+1. 명령어 편집기 -> 메모장, Visual Studio Code( VSCode ), Eclipse / IntelliJ (라이센스X)
+
+2. Java Development Kit ( JDK )
+
+3. Gradle 빌드 도구 
+
+4. Git 버전 관리 시스템 
+
+5. Maria DB 데이터 관리 시스템 
+
+   ..... etc.
+
+
+○ java SE, EE, ME 제품군 
+
+1. Java SE (Standard Edition) > JDK (Java Development Kit)  > JRE (Java Runtime Environment)
+-Java App 일반용		-Java App 개발도구 		-Java App 실행도구 
+			-컴파일러 			-JVM
+			-JVM				-기본 라이브러리 
+			-프로파일러			
+			-디버거
+			-JavaDoc  ...etc.
+
+
+2. Java EE (Enterprize Edition)
+-기업용 Java App 개발도구 
+
+>분산컴퓨팅 (EJB)
+(PC → Workstation → Server → MainFrame) -downsizing하여 한대가 할 일을 분산하게 만들었다.
+
+★>웹 컴퓨팅 (Servlet/JSP)
+
+>서버 자원 관리
+
+>보안 ... etc.
+
+
+3. java ME (Micro Edition)
+-안드로이드에게 밀림 
+- IOT : C
+
+
+
+/*   자바명령문 파일명 .java   */
+
+
+
+								
+	      |---------컴파일 방식---------|     |--------인터프리트 방식--------|    *운영체제에 맞춰서 컴파일을 해준다. 
+● 편집기  →  명령문  →→→→→ 가상기계어 (Bytecode) 	  →           JVM  		→ Linux 		→ Intel CPU
+                         번역 (compile)              		  →           JVM 		→ Window 11  	→ Intel CPU
+	      [ javac.exe(자바컴파일러) ]	        	  →           JVM		→ macOS 	→ Intel CPU
+				        	                 [ java.exe(자바가상머신)
+						실행프로그램=bytecode player ]   
+
+.exe     : 진짜 기계어
+.class   : 가상 기계어    > 실행하기 위해 JVM 필요  
+
+
+VSCode편집기 + (플러그인) 
+
+○ JDK 다운로드 및 설치 >시스템 환경변수 편집 > 고급 > 환경변수 
+> jdk파일 선택해서 시스템에 추가 (JAVA_HOME) → 일부의 java App.은 실행될 때 JDK 또는 JRE가 설치된 폴더의 위치를 조회하는 경우가 있다.
+> 시스템 Path 편집 > 새로만들기 > bin폴더 추가등록 → Path를 등록하는 이유는 명령 프롬프트의 디렉토리 위치에 상관없이 자바개발도구를 실행 할 수 있도록 하기 위함.
+> 맨 위로 올리기 > 오라클에서 자동으로 등록된 건 지우기 
+
+○ 환경변수 편집한 것 확인하기 
+C:\Users\bitcamp>echo %JAVA_HOME%
+C:\Users\bitcamp>echo %PATH%
+C:\Users\bitcamp>javac.exe -version
+C:\Users\bitcamp>java.exe -version
+
+
+프롬프트 > javac.exe -version > enter
+	> java.exe -version > enter 
+	> dir > enter
+	> javac Hello.java > enter ------ // Hello.java 파일을 컴파일한다.		_자바컴파일러
+	> java Hello > enter ------ // 콘솔을 실행한다. (Run)			_자바가상머신
+		/* java.exe Hello 도 되지만 .exe를 안써도 명령프롬프트는 exe파일을 알아서 찾는다.*/	
+	
+
+사용자 홈폴더 - 유저홈 ( C:\Users\bitcamp> )  → bitcamp 를 유저홈이라고 한다.
+
+
+
+
+
+
+
+
+
+
+
+
