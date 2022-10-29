@@ -1,9 +1,0 @@
-#toTop {display: inline-block; background-color: #eee; width: 50px;height: 50px;text-align: center; border-radius: 25px; position: fixed; bottom: 30px; right: 30px;
-  transition: background-color .3s, opacity .5s, visibility .5s; opacity: 0;visibility: hidden;z-index: 1000;}
-#toTop img{vertical-align: middle; padding-top:5px;}
-#toTop::after {font-weight: normal;font-style: normal;font-size: 2em;line-height: 50px;color: #fff;}
-#toTop:hover {cursor: pointer;background-color: rgba(0,2,113,0.6);}
-#toTop:active {background-color: #555;}
-#toTop.show {opacity: 1; visibility: visible;}
-#top_top { position:fixed; text-align:center; right:10px; bottom:62px; cursor:pointer; z-index:99999;  color:gray; margin-right: 20px;}
-#top_top span:hover { color:#000271; }
